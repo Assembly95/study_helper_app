@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_timetable"
+        android:title="시간표" />
+    <item
+        android:id="@+id/nav_timer"
+        android:title="타이머" />
+    <item
+        android:id="@+id/nav_home"
+        android:title="홈" />
+    <item
+        android:id="@+id/nav_quiz"
+        android:title="문제" />
+    <item
+        android:id="@+id/nav_note"
+        android:title="노트" />
+</menu>

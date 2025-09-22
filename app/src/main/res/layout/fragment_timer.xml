@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:fitsSystemWindows="true">
+
+    <!-- 타이머 모드 선택 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:paddingTop="60dp">
+
+
+        <Button
+            android:id="@+id/btn_mode_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일반 타이머"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/btn_mode_pomodoro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="뽀모도로"/>
+    </LinearLayout>
+
+    <!-- 시간 표시 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/tv_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:textSize="50sp"
+            android:textStyle="bold"/>
+
+        <!-- 시간 설정 영역 (일반 타이머용) -->
+        <LinearLayout
+            android:id="@+id/layout_time_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:visibility="gone">
+
+            <NumberPicker
+                android:id="@+id/picker_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <NumberPicker
+                android:id="@+id/picker_minutes"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="분"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <NumberPicker
+                android:id="@+id/picker_seconds"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="초"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"/>
+        </LinearLayout>
+
+        <!-- 뽀모도로 프리셋 버튼 -->
+        <LinearLayout
+            android:id="@+id/layout_pomodoro_presets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btn_25min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25분"
+                android:layout_marginEnd="10dp"/>
+
+            <Button
+                android:id="@+id/btn_5min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5분"
+                android:layout_marginEnd="10dp"/>
+
+            <Button
+                android:id="@+id/btn_10min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10분"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 컨트롤 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시작"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/btn_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일시정지"
+            android:layout_marginEnd="10dp"
+            android:enabled="false"/>
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="초기화"/>
+    </LinearLayout>
+
+</LinearLayout>
