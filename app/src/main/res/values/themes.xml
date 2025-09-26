@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- ⭐ 이 값이 false면 흰색 아이콘, true면 검은색 아이콘 -->
+        <item name="android:windowLightStatusBar">true</item>
 
-    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.Light.NoActionBar" />
+        <!-- 상태바 배경 -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
 </resources>
