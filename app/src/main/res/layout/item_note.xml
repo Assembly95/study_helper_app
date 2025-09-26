@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/note_item_background"
+    android:padding="16dp"
+    android:layout_margin="4dp">
+
+    <TextView
+        android:id="@+id/tv_note_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="노트 제목"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/tv_note_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="노트 내용 미리보기..."
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="4dp"
+        android:maxLines="2"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/tv_note_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2024.01.01"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

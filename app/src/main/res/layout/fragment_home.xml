@@ -1,14 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    android:fillViewport="true">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</FrameLayout>
+        <!-- 날짜와 인사 -->
+        <TextView
+            android:id="@+id/tv_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="안녕하세요!"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024년 1월 1일 월요일"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- 오늘의 명언 카드 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘의 명언"
+                android:textSize="14sp"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_quote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="천리길도 한 걸음부터"
+                android:textSize="18sp"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/tv_quote_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- 속담"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"/>
+        </LinearLayout>
+
+        <!-- 날씨 정보 카드 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오늘의 날씨"
+                    android:textSize="14sp"
+                    android:textColor="@color/purple_500"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="맑음"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15°C"
+                    android:textSize="32sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_weather_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="☀️"
+                android:textSize="60sp"/>
+        </LinearLayout>
+
+        <!-- 오늘의 할 일 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="오늘의 할 일"
+                    android:textSize="16sp"
+                    android:textColor="@color/purple_500"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btn_add_todo"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:textSize="18sp"
+                    android:padding="0dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/todo_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- 할 일 항목들이 여기에 동적으로 추가됨 -->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_no_todo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="등록된 할 일이 없습니다"
+                android:textColor="@android:color/darker_gray"
+                android:layout_gravity="center"
+                android:padding="20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

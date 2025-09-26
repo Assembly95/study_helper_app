@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="quotes_text">
+        <item>천리길도 한 걸음부터</item>
+        <item>오늘 할 일을 내일로 미루지 마라</item>
+        <item>꿈을 지녀라. 그러면 어려운 현실을 이길 수 있다</item>
+        <item>실패는 성공의 어머니</item>
+        <item>노력은 배신하지 않는다</item>
+        <item>시작이 반이다</item>
+        <item>포기하지 않으면 실패는 없다</item>
+        <item>공부는 자신과의 약속이다</item>
+        <item>매일 조금씩이 큰 변화를 만든다</item>
+        <item>지식은 최고의 투자다</item>
+    </string-array>
+
+    <string-array name="quotes_author">
+        <item>속담</item>
+        <item>벤자민 프랭클린</item>
+        <item>괴테</item>
+        <item>속담</item>
+        <item>속담</item>
+        <item>속담</item>
+        <item>토마스 에디슨</item>
+        <item>무명</item>
+        <item>무명</item>
+        <item>벤자민 프랭클린</item>
+    </string-array>
+</resources>

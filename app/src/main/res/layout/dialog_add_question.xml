@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/spinner_dialog_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/et_dialog_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="문제를 입력하세요"
+        android:inputType="textMultiLine"
+        android:minLines="3"/>
+
+    <EditText
+        android:id="@+id/et_dialog_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="정답을 입력하세요"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

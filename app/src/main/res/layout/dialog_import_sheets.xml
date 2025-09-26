@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/et_sheet_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="스프레드시트 ID 입력"
+        android:inputType="text"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="* 시트는 '누구나 볼 수 있음'으로 공유되어야 합니다\n* URL의 /d/와 /edit 사이 부분이 ID입니다"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>
